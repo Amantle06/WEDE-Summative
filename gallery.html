@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the exclusive Avalancé sneaker gallery featuring lightbox viewing, pricing, and sorting.">
+    <meta name="keywords" content="Avalance gallery, luxury sneakers, streetwear, footwear collection">
+    <meta name="author" content="Amantle Kolisang">
+    <title>Avalance Footwear | Gallery</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head>
+<body style="background-color: beige; font-family: Arial, sans-serif;">
+
+    <!-- Header & Navigation Bar -->
+    <header style="padding: 20px;">
+        <div style="text-align: center;">
+            <img src="images/logo.jpeg" alt="Avalance logo" style="width: 200px; height: 130px;">
+        </div>
+        <nav style="text-align: center; margin-top: 15px;" class="navbar">
+            <ul class="nav-links" style="list-style: none; padding: 0;">
+                <li style="display: inline;"><a href="home.html">Home</a> | </li>
+                <li style="display: inline;"><a href="about.html">About Us</a> | </li>
+                <li style="display: inline;"><a href="services.html">Services</a> | </li>
+                <li style="display: inline;"><a href="gallery.html" class="active">Gallery</a> | </li>
+                <li style="display: inline;"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- MAIN CONTENT: Gallery Grid, Sorting, and Lightbox -->
+    <main style="padding: 20px 50px;">
+        <h1 style="text-align: center;"><u>Avalance Collection Gallery</u></h1>
+        <p style="text-align: center; color: #555; margin-bottom: 25px;">Explore our exclusive streetwear footwear range below:</p>
+
+        <!-- JavaScript Sorting Controls -->
+        <div class="gallery-controls" style="text-align: center; margin-bottom: 30px;">
+            <label for="sortSelect" style="font-weight: bold; margin-right: 10px;">Sort Products:</label>
+            <select id="sortSelect" onchange="sortProducts()" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                <option value="default">Default Order</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+            </select>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="product-grid" id="productGrid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;">
+            
+            <!-- Product Card 1 -->
+            <div class="product-card" data-price="1899.99" data-name="Avalancé Teal Apex" style="background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+                
+                <div class="product-img-container" style="height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 12px; background: #f9f9f9;">
+                    <img src="Images/Teal,White&Purple.jpeg" alt="Avalancé White, Teal and Purple Platform" onclick="openLightbox(this.src, 'Avalancé Teal Apex', 'R1,899.99', 'Signature teal and purple statement sneaker with platform sole.')">
+                </div>
+                <h3 style="font-size: 16px; margin: 8px 0 4px 0;">Avalancé Teal Apex</h3>
+                <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Signature teal and purple statement sneaker.</p>
+                <span class="price" style="display: block; font-weight: bold; color: #008080; font-size: 16px; margin-bottom: 12px;">R1,899.99</span>
+                <button class="view-btn" onclick="openLightbox('images/teal,white&purple.jpeg', 'Avalancé Teal Apex', 'R1,899.99', 'Signature teal and purple statement sneaker.')" style="background: #008080; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">View Product</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card" data-price="1999.99" data-name="Avalancé Crimson Classic" style="background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+                
+                <div class="product-img-container" style="height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 12px; background: #f9f9f9;">
+                    <img src="Images/Red&White sneaker.jpeg" alt="Avalancé Crimson Classic" onclick="openLightbox(this.src, 'Avalancé Crimson Classic', 'R1,999.99', 'Premium red and white streetwear sneaker.')">
+                </div>
+                <h3 style="font-size: 16px; margin: 8px 0 4px 0;">Avalancé Crimson Classic</h3>
+                <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Premium red and white streetwear sneaker.</p>
+                <span class="price" style="display: block; font-weight: bold; color: #008080; font-size: 16px; margin-bottom: 12px;">R1,999.99</span>
+                <button class="view-btn" onclick="openLightbox('images/red&white sneaker.jpeg', 'Avalancé Crimson Classic', 'R1,999.99', 'Premium red and white streetwear sneaker.')" style="background: #008080; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">View Product</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card" data-price="1999.99" data-name="Avalancé Black and White Edition" style="background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+               
+                <div class="product-img-container" style="height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 12px; background: #f9f9f9;">
+                    <img src="Images/Black&White shoe.jpeg" alt="Avalancé Black and White Edition" onclick="openLightbox(this.src, 'Avalancé Black and White Edition', 'R1,999.99', 'Sleek black and white luxury edition.')">
+                </div>
+                <h3 style="font-size: 16px; margin: 8px 0 4px 0;">Avalancé Black and White Edition</h3>
+                <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Sleek black and white luxury edition.</p>
+                <span class="price" style="display: block; font-weight: bold; color: #008080; font-size: 16px; margin-bottom: 12px;">R1,999.99</span>
+                <button class="view-btn" onclick="openLightbox('Images/black&white shoe.jpeg', 'Avalancé Black and White Edition', 'R1,999.99', 'Sleek black and white luxury edition.')" style="background: #008080; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">View Product</button>
+            </div>
+
+             <!-- Product Card 4 -->
+            <div class="product-card" data-price="1499.99" data-name="Avalancé Grey and White Platform" style="background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+               
+                <div class="product-img-container" style="height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 12px; background: #f9f9f9;">
+                    <img src="Images/Grey&White.jpeg" alt="Avalancé Grey and White Platform" onclick="openLightbox(this.src, 'Avalancé Grey and White Platform ', 'R1,499.99', 'Grey and White Daily Luxury.')">
+                </div>
+                <h3 style="font-size: 16px; margin: 8px 0 4px 0;">Avalancé Grey and White Platform</h3>
+                <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Sleek black and white luxury edition.</p>
+                <span class="price" style="display: block; font-weight: bold; color: #008080; font-size: 16px; margin-bottom: 12px;">R1,499.99</span>
+                <button class="view-btn" onclick="openLightbox('Images/black&white shoe.jpeg', 'Avalancé Grey and White Platform', 'R1,499.99', 'Grey and White Daily Luxury .')" style="background: #008080; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">View Product</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card" data-price="1499.99" data-name="Avalance Glacier and White Runner" style="background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+                <div class="product-img-container" style="height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 12px; background: #f9f9f9;">
+                 
+                    <img src="Images/Image8.jpeg" alt="Avalance Glacier and White Runner" style="width: 100%; height: 100%; object-fit: contain; cursor: pointer; display: block;" onclick="openLightbox(this.src, 'Avalance Glacier and White Runner', 'R1,499.99', 'Elegant Glacier with White Accents.')">
+                </div>
+                <h3 style="font-size: 16px; margin: 8px 0 4px 0;">Avalance Glacier and White Runner</h3>
+                <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Elegant Glacier with White Accents.</p>
+                <span class="price" style="display: block; font-weight: bold; color: #008080; font-size: 16px; margin-bottom: 12px;">R1,499.99</span>
+                <button class="view-btn" onclick="openLightbox('Images/Image8.jpeg', 'Avalance Glacier and White Runner', 'R1,499.99', 'Elegant Glacier with White Accents.')" style="background: #008080; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">View Product</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card" data-price="1599.99" data-name="Avalance Cyber Pink and Black Edition" style="background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 15px; width: 260px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+                <div class="product-img-container" style="height: 180px; overflow: hidden; border-radius: 6px; margin-bottom: 12px; background: #f9f9f9;">
+                  
+                    <img src="Images/Cyber Pink and Black Edition.jpeg" alt="Avalance Cyber Pink and Black Edition" style="width: 100%; height: 100%; object-fit: contain; cursor: pointer; display: block;" onclick="openLightbox(this.src, 'Avalance Cyber Pink and Black Edition', 'R1,599.99', 'Epic Cyber Style Edition.')">
+                </div>
+                <h3 style="font-size: 16px; margin: 8px 0 4px 0;">Avalance Cyber Pink and Black Edition</h3>
+                <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Epic Cyber Style Edition.</p>
+                <span class="price" style="display: block; font-weight: bold; color: #008080; font-size: 16px; margin-bottom: 12px;">R1,599.99</span>
+                <button class="view-btn" onclick="openLightbox('Images/Cyber Pink and Black Edition.jpeg', 'Avalance Cyber Pink and Black Edition', 'R1,599.99', 'Epic Cyber Style Edition.')" style="background: #008080; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">View Product</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal Overlay Structure -->
+    <div id="lightboxModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center;">
+        <div class="modal-content" style="background: #fff; padding: 25px; border-radius: 8px; max-width: 450px; text-align: center; position: relative;">
+            <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; font-weight: bold;">&times;</span>
+            <img id="lightboxImg" src="" alt="Enlarged Sneaker View" style="width: 100%; height: 280px; object-fit: contain; background: #f9f9f9; border-radius: 6px; margin-bottom: 15px;">
+            <h3 id="lightboxTitle" style="margin: 10px 0 5px 0; color: #008080;"></h3>
+            <p id="lightboxDesc" style="font-size: 13px; color: #555; margin-bottom: 10px;"></p>
+            <span id="lightboxPrice" style="font-size: 18px; font-weight: bold; color: #333; display: block; margin-bottom: 15px;"></span>
+            <button onclick="alert('Item added to your shopping bag!')" style="background: #008080; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold;">Add to Bag</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center; padding: 10px;">
+        <p>&copy; ST10516126 - Avalance Footwear. All rights reserved.</p>
+        <p id="datetime"></p>
+    </footer>
+
+</body>
+</html>

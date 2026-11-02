@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to Avalance - Discover elite handcrafted streetwear footwear.">
+        <meta name="keywords" content="Avalance, luxury sneakers, streetwear, Italian footwear, designer shoes">
+        <meta name="author" content="Amantle Kolisang">
+        <title>Avalance Footwear | Contact Us</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="script.js" defer></script> 
+
+    </head>
+    <body style="background-color: beige; font-family: Arial, sans-serif;">
+
+        <header style="padding: 20px;">
+            <div style="text-align: center;">
+                <img src="images/logo.jpeg" alt="Avalance logo" style="width: 200px; height: 130px;">
+            </div>
+
+             <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+         <!-- MAIN CONTENT: Contact Us Form -->
+
+    <main style="padding: 20px 50px; max-width: 600px; margin: 0 auto;">
+        <h1 style="text-align: center;"><u>Get in Touch with Avalancé</u></h1>
+        <p style="text-align: center; color: #555; margin-bottom: 25px;">Send us a general message and our team will get back to you promptly.</p>
+
+        <!-- Contact Form with HTML Validation  -->
+   
+        <form id="contactForm" onsubmit="handleContactSubmit(event)" style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+            
+            <div style="margin-bottom: 15px;">
+                <label for="contactName" style="display: block; font-weight: bold; margin-bottom: 5px;">Full Name:</label>
+                <input type="text" id="contactName" name="contactName" required style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="contactEmail" style="display: block; font-weight: bold; margin-bottom: 5px;">Email Address:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label for="messageType" style="display: block; font-weight: bold; margin-bottom: 5px;">Type of Message:</label>
+                <select id="messageType" name="messageType" required style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="">-- Select Message Type --</option>
+                    <option value="General Query">General Customer Support</option>
+                    <option value="Order Tracking">Order & Delivery Status</option>
+                    <option value="Feedback">Feedback / Compliment</option>
+                    <option value="Press">Press & Media</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="fullMessage" style="display: block; font-weight: bold; margin-bottom: 5px;">Full Message:</label>
+                <textarea id="fullMessage" name="fullMessage" rows="5" required placeholder="Type your message here..." style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+            </div>
+
+            <button type="submit" style="background: #008080; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%;">Send Email Message</button>
+        </form>
+
+        <!-- Success Compilation Box -->
+        <div id="contactResponseBox" style="display: none; margin-top: 25px; padding: 20px; background: #e6f2f2; border: 1px solid #008080; border-radius: 8px; text-align: center;">
+            <h3 style="color: #008080; margin-top: 0;">Message Compiled!</h3>
+            <p id="contactResponseText" style="color: #333; font-size: 14px; margin-bottom: 15px;"></p>
+            <a id="mailToBtn" href="#" style="background: #008080; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; display: inline-block;">Open Email Client to Send</a>
+        </div>
+    </main>
+
+    <hr>
+
+    <!-- Footer Section -->
+     
+    <footer style="text-align: center; padding: 10px;">
+        <p>&copy; ST10516126 - Avalance Footwear. All rights reserved.</p>
+        <p id="datetime"></p>
+    </footer>
+
+</body>
+</html>
+
